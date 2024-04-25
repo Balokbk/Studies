@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    const char baseDigits[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+    int convertedNum[64];
+    long int numToConvert;
+    int nextDigit, base, i = 0;
+
+    //Receives the number and base.
+
+    scanf("%ld %d", &numToConvert, &base);
+
+    if(base == 2 || base == 8 ||base == 16){
+    //Converts the number to the base we selected.
+
+    do{
+        convertedNum[i] = numToConvert % base;
+        i++;
+        numToConvert = numToConvert / base;
+        }
+    while (numToConvert !=0);
+
+    //Shows the number in the inverse order.  
+
+    printf("Converted number %ld to base %d = ", numToConvert, base);
+    for(i--; i >= 0; i--){
+        nextDigit = convertedNum[i];
+        printf("%c", baseDigits[nextDigit]);
+    }
+    }
+    else{
+        printf("Use outra base!");
+    }
+    return 0;
+}
