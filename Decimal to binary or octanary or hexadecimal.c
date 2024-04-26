@@ -26,7 +26,7 @@ int main() {
     printf("Converted number %ld to base %d = ", fixedNum, base);
     for(i--; i >= 0; i--){
         nextDigit = convertedNum[i];
-        printf("%c\n", baseDigits[nextDigit]);
+        printf("%c", baseDigits[nextDigit]);
     }
     }
     else{
