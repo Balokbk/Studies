@@ -10,7 +10,7 @@ Recommendations: 4, 6, 8, 12, 20, 100
 ''')
     if n.isdigit():
         rngDice = random.randint(1, int(n))
-        print(f"You got {rngDice} in a {n} dice.")
+        print(f"\nYou got {rngDice} in a {n} dice.")
         print("\n======================\n")
     else:
         os.system("cls")
@@ -57,9 +57,8 @@ def isRow():
 
 #the main part
 def choice():
-    os.system("cls")
     isRow()
-    c = input('''Choose what do you want to do: 
+    c = input('''Chose what do you want to do: 
 1- New_char 
 2- Remove_char 
 3- Dice_roller
