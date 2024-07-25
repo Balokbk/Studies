@@ -20,7 +20,12 @@ Recommendations: 4, 6, 8, 12, 20, 100
 #functon to get the name of the characters
 def inName():
     name = input("Insert the name of the char: ")
-    row.append(name)
+    if name == "" or name == " ":
+        print("[ERROR]Invalid name!")
+        os.system("cls")
+        inName()
+    else:
+        row.append(name)
 
 #function to remove a name from the row
 def remove():
@@ -58,7 +63,7 @@ def isRow():
 #the main part
 def choice():
     isRow()
-    c = input('''Chose what do you want to do: 
+    c = input('''Choose what do you want to do: 
 1- New_char 
 2- Remove_char 
 3- Dice_roller
