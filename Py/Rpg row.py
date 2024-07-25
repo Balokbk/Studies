@@ -21,7 +21,6 @@ Recommendations: 4, 6, 8, 12, 20, 100
 def inName():
     name = input("Insert the name of the char: ")
     if name == "" or name == " ":
-        print("[ERROR]Invalid name!")
         os.system("cls")
         inName()
     else:
